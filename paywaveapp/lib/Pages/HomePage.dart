@@ -5,14 +5,16 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Banking App',
+      debugShowCheckedModeBanner: false,
+      title: 'PayWave',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: const MaterialColor(0xFF1C4262, {800: Color(0xFF122D41),
+        }),
       ),
       home: const MyHomePage(),
     );
@@ -20,44 +22,84 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
+  const MyHomePage({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Banking App'),
+        backgroundColor: const Color.fromARGB(255, 28, 66, 98),
         actions: [
           IconButton(
-            icon: const Icon(Icons.menu),
-            onPressed: () {},
-          ),
-          IconButton(
             icon: const Icon(Icons.settings),
+            color: Colors.white,
             onPressed: () {},
           ),
         ],
+        iconTheme: const IconThemeData(color: Colors.white),
+        centerTitle: true,
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 28, 66, 98),
+              ),
+              child: Text(
+                'Welcome to PayWave',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            ListTile(
+              title: const Text('Drawer Item 1'),
+              onTap: () {
+                // Add your drawer item 1 logic here
+              },
+              leading: const Icon(
+                Icons.home,
+                color: Colors.red,
+              ),
+            ),
+            ListTile(
+              title: const Text('Drawer Item 2'),
+              onTap: () {
+                // Add your drawer item 2 logic here
+              },
+              leading: const Icon(
+                Icons.home,
+                color: Colors.red,
+              ),
+            ),
+          ],
+        ),
       ),
       body: Column(
         children: [
           Container(
-            color: Colors.blue,
-            height: 200,
+            color: const Color.fromARGB(255, 28, 66, 98),
+            height: 350,
+            width: 500,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const CircleAvatar(
-                  radius: 50,
+                  radius: 70,
                   backgroundColor: Colors.white,
                   child: Icon(
                     Icons.person,
-                    size: 50,
+                    size: 110,
                     color: Colors.blue,
                   ),
                 ),
                 const SizedBox(height: 10),
                 const Text(
-                  'YOUR NAME',
+                  'AIdevol',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -88,13 +130,12 @@ class MyHomePage extends StatelessWidget {
               ],
             ),
           ),
-          
           Expanded(
             child: ListView(
               children: [
                 const ListTile(
                   leading: CircleAvatar(
-                    backgroundColor: Colors.blue,
+                    backgroundColor: Color.fromARGB(255, 38, 83, 120),
                     child: Icon(Icons.payment),
                   ),
                   title: Text('Lorem Ipsum Company'),
@@ -102,7 +143,7 @@ class MyHomePage extends StatelessWidget {
                 ),
                 const ListTile(
                   leading: CircleAvatar(
-                    backgroundColor: Colors.red,
+                    backgroundColor: Color.fromARGB(255, 38, 83, 120),
                     child: Icon(Icons.payment),
                   ),
                   title: Text('Auctor Elit Ltd'),
@@ -110,7 +151,7 @@ class MyHomePage extends StatelessWidget {
                 ),
                 const ListTile(
                   leading: CircleAvatar(
-                    backgroundColor: Colors.red,
+                    backgroundColor: Color.fromARGB(255, 38, 83, 120),
                     child: Icon(Icons.payment),
                   ),
                   title: Text('Lectus Sit Amet est'),
@@ -118,15 +159,25 @@ class MyHomePage extends StatelessWidget {
                 ),
                 const ListTile(
                   leading: CircleAvatar(
-                    backgroundColor: Colors.red,
+                    backgroundColor: Color.fromARGB(255, 38, 83, 120),
                     child: Icon(Icons.payment),
                   ),
                   title: Text('Congue Quisque'),
                   subtitle: Text('\$1,500 Withdraw money'),
                 ),
-                TextButton(
-                  onPressed: () {},
-                  child: const Text('more'),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'more>>',
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),

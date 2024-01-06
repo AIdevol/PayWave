@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-// import 'Pages/LoginPage.dart';
-// import 'Pages/HomePage.dart';
+import 'Pages/LoginPage.dart'; // Import your LoginScreen file
+import 'Pages/HomePage.dart'; // Import your HomePage file
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key, Key});
+  const MyApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,18 +23,18 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key});
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key});
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<HomePage> {
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Homepage(),
+      drawer: HomePage(), // Note: Changed 'Homepage()' to 'HomePage()'
       appBar: AppBar(
         title: const Text('Home Page'),
       ),

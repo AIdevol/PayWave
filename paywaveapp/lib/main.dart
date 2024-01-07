@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: HomePage(), // Note: Changed 'Homepage()' to 'HomePage()'
+      // drawer: HomePage(), // Note: Changed 'Homepage()' to 'HomePage()'
       appBar: AppBar(
         title: const Text('Home Page'),
       ),

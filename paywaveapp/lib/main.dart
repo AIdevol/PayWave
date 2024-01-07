@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Pages/LoginPage.dart'; // Import your LoginScreen file
-import 'Pages/HomePage.dart'; // Import your HomePage file
+import 'Pages/LoginPage.dart'; 
+import 'Pages/HomePage.dart'; 
 
 void main() {
   runApp(const MyApp());

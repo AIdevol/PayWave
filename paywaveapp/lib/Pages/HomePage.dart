@@ -13,7 +13,17 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'PayWave',
       theme: ThemeData(
-        primarySwatch: const MaterialColor(0xFF1C4262, {800: Color(0xFF122D41),
+         primarySwatch: const MaterialColor(0xFF1C4262, {
+          50: Color(0xFF122D41),
+          100: Color(0xFF122D41),
+          200: Color(0xFF122D41),
+          300: Color(0xFF122D41),
+          400: Color(0xFF122D41),
+          500: Color(0xFF122D41),
+          600: Color(0xFF122D41),
+          700: Color(0xFF122D41),
+          800: Color(0xFF122D41),
+          900: Color(0xFF122D41),
         }),
       ),
       home: const MyHomePage(),

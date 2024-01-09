@@ -17,7 +17,7 @@ class LoginScreen extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [Color.fromARGB(255, 38, 83, 120), Colors.white],
-            stops: [0.35, 0.65],
+            stops: [0.5, 0.5],
           ),
         ),
         child: Center(
@@ -81,6 +81,7 @@ class LoginScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const TextField(
+            textAlign: TextAlign.center,
             decoration: InputDecoration(
               border: OutlineInputBorder(
                 borderSide: BorderSide(
@@ -95,6 +96,7 @@ class LoginScreen extends StatelessWidget {
           const SizedBox(height: 20),
           const TextField(
             obscureText: true,
+            textAlign: TextAlign.center,
             decoration: InputDecoration(
               border: OutlineInputBorder(
                 borderSide: BorderSide(

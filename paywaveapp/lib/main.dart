@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'Pages/LoginPage.dart'; 
-import 'Pages/HomePage.dart'; 
+import 'Pages/LoginPage.dart';
+import 'Pages/HomePage.dart';
+import 'Pages/SignUpPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,29 +19,34 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      initialRoute: '/login', // Set the initial route
+      routes: {
+        '/login': (context) => const LoginPage(),
+        '/signup': (context) => const SignUpPage(),
+        '/home': (context) => const HomePage(),
+      },
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key});
+// class MyHomePage extends StatefulWidget {
+//   const MyHomePage({Key? key});
 
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
+//   @override
+//   _MyHomePageState createState() => _MyHomePageState();
+// }
 
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      // drawer: HomePage(), // Note: Changed 'Homepage()' to 'HomePage()'
-      appBar: AppBar(
-        title: const Text('Home Page'),
-      ),
-      body: const Center(
-        //child: Text('Welcome to the Home Page!'),
-      ),
-    );
-  }
-}
+// class _MyHomePageState extends State<MyHomePage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       // drawer: HomePage(), // Note: Changed 'Homepage()' to 'HomePage()'
+//       appBar: AppBar(
+//         title: const Text('Home Page'),
+//       ),
+//       body: const Center(
+//         //child: Text('Welcome to the Home Page!'),
+//       ),
+//     );
+//   }
+// }

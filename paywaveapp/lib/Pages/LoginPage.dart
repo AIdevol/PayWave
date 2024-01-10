@@ -74,82 +74,173 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildLoginForm(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20.0),
-      child: Column(
+//   Widget _buildLoginForm(BuildContext context) {
+//     return Container(
+//       padding: const EdgeInsets.all(20.0),
+//       child: Column(
         
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const TextField(
-            textAlign: TextAlign.center,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.grey,
-                ),
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         children: [
+//           const TextField(
+//             textAlign: TextAlign.center,
+//             decoration: InputDecoration(
+//               border: OutlineInputBorder(
+//                 borderSide: BorderSide(
+//                   color: Colors.grey,
+//                 ),
+//               ),
+//               hintText: 'Username or Email',
+//               contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+//               // textAlign: TextAlign.center,
+//             ),
+//           ),
+//           const SizedBox(height: 20),
+//           const TextField(
+//             obscureText: true,
+//             textAlign: TextAlign.center,
+//             decoration: InputDecoration(
+//               border: OutlineInputBorder(
+//                 borderSide: BorderSide(
+//                   color: Colors.grey,
+//                 ),
+//               ),
+//               hintText: 'Password',
+//               contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+//               // textAlign: TextAlign.center,
+//             ),
+//           ),
+//           const SizedBox(height: 30),
+//           ElevatedButton(
+//             onPressed: () {},
+//             style: ElevatedButton.styleFrom(
+//               primary: const Color.fromARGB(255, 38, 66, 120),
+//               shape: RoundedRectangleBorder(
+//                 borderRadius: BorderRadius.circular(10),
+//               ),
+//             ),
+//             child: const Text('LOG IN', style: TextStyle(color: Colors.white)),
+//           ),
+//           const SizedBox(height: 20),
+//           Row(
+//             mainAxisAlignment: MainAxisAlignment.center,
+//             children: [
+//               TextButton(
+//                 onPressed: () {},
+//                 child: const Text(
+//                   'Forgot Password?',
+//                   style: TextStyle(
+//                     color: Colors.blue,
+//                   ),
+//                 ),
+//               ),
+//               const SizedBox(width: 10),
+//               TextButton(
+//                 onPressed: () {},
+//                 child: const Text(
+//                   'New to Bank Apps? Sign Up',
+//                   style: TextStyle(
+//                     color: Colors.blue,
+//                   ),
+//                 ),
+//               ),
+//             ],
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+  Widget _buildLoginForm(BuildContext context) {
+  return Container(
+    padding: const EdgeInsets.all(16.0),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const TextField(
+          textAlign: TextAlign.center,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Colors.grey,
               ),
-              hintText: 'Username or Email',
-              contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-              // textAlign: TextAlign.center,
+            ),
+            hintText: 'Username or Email',
+            contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          ),
+        ),
+        const SizedBox(height: 20),
+        const TextField(
+          obscureText: true,
+          textAlign: TextAlign.center,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Colors.grey,
+              ),
+            ),
+            hintText: 'Password',
+            contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          ),
+        ),
+        const SizedBox(height: 20),
+        Row(
+          children: [
+            Checkbox(
+              value: false, // Set the initial value as needed
+              onChanged: (bool? value) {
+                // Handle checkbox changes here
+              },
+            ),
+            const Text(
+              'Remember Me',
+              style: TextStyle(
+                color: Colors.black,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 30),
+        ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+            primary: const Color.fromARGB(255, 38, 66, 120),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
             ),
           ),
-          const SizedBox(height: 20),
-          const TextField(
-            obscureText: true,
-            textAlign: TextAlign.center,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.grey,
+          child: const Text('LOG IN', style: TextStyle(color: Colors.white)),
+        ),
+        const SizedBox(height: 20),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+              onPressed: () {},
+              child: const Text(
+                'Forgot Password?',
+                style: TextStyle(
+                  color: Colors.blue,
                 ),
-              ),
-              hintText: 'Password',
-              contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-              // textAlign: TextAlign.center,
-            ),
-          ),
-          const SizedBox(height: 30),
-          ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              primary: const Color.fromARGB(255, 38, 66, 120),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
               ),
             ),
-            child: const Text('LOG IN', style: TextStyle(color: Colors.white)),
-          ),
-          const SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextButton(
-                onPressed: () {},
-                child: const Text(
-                  'Forgot Password?',
-                  style: TextStyle(
-                    color: Colors.blue,
-                  ),
+            const SizedBox(width: 10),
+            TextButton(
+              onPressed: () {},
+              child: const Text(
+                'New to Bank Apps? Sign Up',
+                style: TextStyle(
+                  color: Colors.blue,
                 ),
               ),
-              const SizedBox(width: 10),
-              TextButton(
-                onPressed: () {},
-                child: const Text(
-                  'New to Bank Apps? Sign Up',
-                  style: TextStyle(
-                    color: Colors.blue,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
+            ),
+          ],
+        ),
+      ],
+    ),
+  );
   }
 }
+
 
 void main() {
   runApp(const MaterialApp(

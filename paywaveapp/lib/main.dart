@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'Pages/LoginPage.dart';
-import 'Pages/HomePage.dart';
-import 'Pages/SignUpPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,12 +17,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute: '/login', // Set the initial route
-      routes: {
-        '/login': (context) => const LoginPage(),
-        '/signup': (context) => const SignUpPage(),
-        '/home': (context) => const HomePage(),
-      },
+      home: const LoginScreen(), // Set the initial route
+      // routes: {
+      //   '/login': (context) => const LoginPage(),
+      //   '/signup': (context) => const SignUpPage(),
+      //   '/home': (context) => const HomePage(),
+      // },
     );
   }
 }
